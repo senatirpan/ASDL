@@ -1,0 +1,36 @@
+{
+    "global_params" : {
+        "train_nl_file" : "data/train_nl.sample",
+        "train_code_file" : "data/train_code.sample",
+        "valid_nl_file" : "data/nl_valid.sample",
+        "valid_code_file" : "data/code_valid.sample"
+    },
+
+    "encoder_params" : {
+        "tokenizer_path" : "tokenizers/en_tok/",
+        "vocab_size" : 25000,
+        "min_freq" : 3,
+        "max_length" : 512,
+        "num_attn_heads" : 8,
+        "num_hidden_layers" : 8,
+        "hidden_size" : 512
+    },
+
+    "decoder_params" : {
+        "tokenizer_path" : "tokenizers/de_tok/",
+        "vocab_size" : 25000,
+        "min_freq" : 3,
+        "max_length" : 256,
+        "num_attn_heads" : 8,
+        "num_hidden_layers" : 8,
+        "hidden_size" : 512
+    },
+
+    "model_params" : {
+        "batch_size" : 16,
+        "num_epochs" : 1,
+        "lr": 0.0001,
+        "model_path" : "models/",
+        "model_name": "encdec.mdl"
+    }
+}
